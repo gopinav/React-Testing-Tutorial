@@ -45,5 +45,10 @@ describe("Application", () => {
       "I agree to the terms and conditions"
     );
     expect(termsElement2).toBeInTheDocument();
+
+    /** getByPlaceholderText */
+
+    const nameElement3 = screen.getByPlaceholderText("Fullname");
+    expect(nameElement3).toBeInTheDocument();
   });
 });
