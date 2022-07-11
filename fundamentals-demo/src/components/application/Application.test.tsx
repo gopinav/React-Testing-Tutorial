@@ -5,6 +5,8 @@ describe("Application", () => {
   test("renders", () => {
     render(<Application />);
 
+    /** getByRole */
+
     const pageHeading = screen.getByRole("heading", {
       level: 1,
     });
@@ -33,5 +35,15 @@ describe("Application", () => {
 
     const submitElement = screen.getByRole("button");
     expect(submitElement).toBeInTheDocument();
+
+    /** getByLabelText */
+
+    const nameElement2 = screen.getByLabelText("Name", { selector: "input" });
+    expect(nameElement2).toBeInTheDocument();
+
+    const termsElement2 = screen.getByLabelText(
+      "I agree to the terms and conditions"
+    );
+    expect(termsElement2).toBeInTheDocument();
   });
 });
