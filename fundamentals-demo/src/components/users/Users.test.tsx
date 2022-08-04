@@ -17,7 +17,7 @@ describe("Users", () => {
   });
 
   test("renders error", async () => {
-    server.resetHandlers(
+    server.use(
       rest.get(
         "https://jsonplaceholder.typicode.com/users",
         (req, res, ctx) => {
