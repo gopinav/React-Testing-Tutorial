@@ -27,9 +27,11 @@
     "coverage": "yarn test --coverage --watchAll --collectCoverageFrom='src/components/**/*.{ts,tsx}' --collectCoverageFrom='!src/components/**/*.{types, stories, constants, test, spec}.{ts,tsx}'"
   },
   "eslintConfig": {
+    "plugins": ["jest-dom"],
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:jest-dom/recommended"
     ]
   },
   "browserslist": {
@@ -55,6 +57,7 @@
     }
   },
   "devDependencies": {
+    "eslint-plugin-jest-dom": "^4.0.2",
     "msw": "^0.44.2"
   }
 }
