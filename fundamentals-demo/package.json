@@ -64,13 +64,21 @@
   "devDependencies": {
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jest-dom": "^4.0.2",
-    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "msw": "^0.44.2",
     "prettier": "2.7.1"
   },
+  "lint-straged": {
+    "*.{ts,tsx}": [
+      "npm run link"
+    ],
+    "*.{ts, tsx, css,scss}": [
+      "npm run format"
+    ]
+  },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && npm run format"
+      "pre-commit": "lint-staged"
     }
   }
 }
