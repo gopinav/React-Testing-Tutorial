@@ -35,7 +35,7 @@ describe('Application', () => {
 
     const submitElement = screen.getByRole('button')
     expect(submitElement).toBeInTheDocument()
-    expect(submitElement).not.toBeDisabled() //Test again
+    expect(submitElement).not.toBeDisabled() //Test
 
     /** getByLabelText */
 
