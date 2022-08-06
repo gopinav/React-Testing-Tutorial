@@ -64,7 +64,13 @@
   "devDependencies": {
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jest-dom": "^4.0.2",
+    "husky": "^8.0.1",
     "msw": "^0.44.2",
     "prettier": "2.7.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && yarn format"
+    }
   }
 }
