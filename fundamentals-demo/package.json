@@ -26,8 +26,7 @@
     "eject": "react-scripts eject",
     "coverage": "yarn test --coverage --watchAll --collectCoverageFrom='src/components/**/*.{ts,tsx}' --collectCoverageFrom='!src/components/**/*.{types, stories, constants, test, spec}.{ts,tsx}'",
     "lint": "eslint --ignore-path .gitignore .",
-    "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,tsx,css,scss}\"",
-    "prepare": "cd .. && husky install front/.husky"
+    "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,tsx,css,scss}\""
   },
   "eslintConfig": {
     "plugins": [
@@ -65,22 +64,7 @@
   "devDependencies": {
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jest-dom": "^4.0.2",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
     "msw": "^0.44.2",
     "prettier": "2.7.1"
-  },
-  "lint-straged": {
-    "*.{ts,tsx}": [
-      "npm run link"
-    ],
-    "*.{ts, tsx, css,scss}": [
-      "npm run format"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   }
 }
